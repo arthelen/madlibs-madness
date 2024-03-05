@@ -1,0 +1,177 @@
+/* 👇 Add your custom styles at the bottom of this file 👇 */
+
+body {
+  margin:0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;  
+  height: 100%;
+  background-color: #fc85c7;
+  background-image: -webkit-linear-gradient(200deg, #fc85c7 0%, #e91a67 100%);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+
+/* CLOUDS */
+body:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  margin: auto;
+  border-radius: 100%;
+  background: transparent;
+  display: block;
+  
+  box-shadow: 0 0 150px 100px rgba(255, 255, 255, .6),
+              200px 0 200px 150px rgba(255, 255, 255, .6),
+              -250px 0 300px 150px rgba(255, 255, 255, .6),
+              550px 0 300px 200px rgba(255, 255, 255, .6),
+              -550px 0 300px 200px rgba(255, 255, 255, .6);
+}
+
+img {
+  height: 77px;
+  width: 70px;
+  display: block;
+  margin: auto auto -65px auto;
+  padding-top: 35px;
+  transition: 1s;
+}
+
+img:hover {
+  transform: rotate(360deg);
+}
+
+h1 {
+  font-family: 'Gorditas', cursive;
+  color: #e91a67;
+  text-align: center;
+  font-size: 68px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: 'Signika', sans-serif;
+  letter-spacing: 1px;
+  color: #fff997;  
+  text-align: center;
+  font-size: 23px;
+  margin-top: 10px;
+}
+
+#container {
+  position: relative;
+  background-color: rgba(255,255,255,.6);
+  width: 70%;
+  max-width: 680px;
+  min-height: 500px;
+  border: 2px solid #fff997;
+  box-shadow: 3px 3px rgba(0,27,0,.2);
+  border-radius: 20px;
+  padding: 0 40px 40px 40px;
+  margin: 10vh auto 0 auto;
+  overflow: hidden;
+}
+
+#container form, 
+#container h1,
+#container h3 {
+  transition-duration: .2s;
+}
+
+#container.generated form, 
+#container.generated h1,
+#container.generated h3 {
+  opacity: 0;
+}
+
+#output {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  max-width: 690px;
+  transition-duration: 1s;
+  font-family: 'Signika', sans-serif;
+  font-size: 25px;
+  color: #a46607;
+  transform: translate(-50%, -100%);
+}
+
+#container.generated #output {
+  transform: translate(-50%, -50%);
+}
+
+input {
+  font-family: 'Signika', sans-serif;
+  font-style: italic;
+  display: block;
+  font-size: 17px;
+  width: 40%;
+  height: 30px;
+  margin: 25px auto;
+  color: #a46607;
+  -webkit-text-fill-color: #a46607;
+  border: 2px solid #a46607;
+  border-radius: 25px;
+  text-align: center;
+  transition: ease-in-out .3s;
+}
+
+/* makes text box background stay white if text is autofilled */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:focus {
+  outline: 2px solid #fff997;
+  transform: scale(1.1);
+}
+
+input:hover {
+  outline: 2px solid #fff997;
+}
+
+button {
+  font-family: 'Gorditas', cursive;
+  letter-spacing: 2px;
+  display: block;
+  color: white;
+  background-color: #e91a67;
+  margin: 40px auto 0 auto;
+  width: 170px;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  border-radius: 25px;
+  transition: ease-in-out .2s;
+}
+
+button:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* 👇 Write your custom styles below 👇! */
